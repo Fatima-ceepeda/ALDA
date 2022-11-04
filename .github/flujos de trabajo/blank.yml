@@ -1,0 +1,290 @@
+##datos
+datos=("cocaina”
+datos
+import pandas as pd
+s NOMBREDELASERIE=pd.Series(datos) s NOMBREDELASERIE
+Creacion de una serie por medio de una lista
+Out[3]:
+import pandas as pd
+s datos=pd.Series(datos) s datos
+Creacion de una serie por medio de una lista de valores
+In [4]:
+s cocaina=pd.Series([0,9,8,7,6,5]) 
+s cocaina
+Out[4]:
+In [6]:
+# Metodo de values
+s cocaina.values
+Out[6]:
+# Metodo index
+scocaina.index
+In [7]:
+# Metodo index
+scocaina.index
+Out[7]:
+In[10]:
+# Indice personalizado
+scocaina=pd.Series([0,9,8,7,6,5], index=["r","o","l","e","s","o"]) scocaina
+Out[10]:
+In[9]:
+# Extraccion de un elemento por medio de su indice
+scocaina["o"]
+Out[9]:
+In[11]:
+# Condiciones en donde nos mande un valor determinado # por medio de operaciones
+Out[11]:
+In[14]:
+# Operaciones en las series
+# pero a cada elemento de la serie # ejemplo de suma
+scocaina + 3
+Out[14]:
+In[15]:
+# ejemplo de multiplicacion
+scocaina * 2
+Out[15]:
+Creacion de un diccionario
+In[17]:
+# Creacion de un diccionario con poblacion # se muestra el nombre del indice
+#valores de la cantidad de poblacion
+bebidas={"pepsi":"manzanita","coca":"coca ligth", "dr peper":"clasica"} 
+bebidas
+Out[17]:
+In[18]:
+sBS=pd.Series(bedidas) 
+sBS
+Out[18]:
+In[19]:
+# Creacion de un diccionario con poblacion # se muestra el nombre del indice
+#valores de la cantidad de poblacion
+meses={"Enero":"31","Marzo":"30","Mayo":"31","Julio":"30","Diciembre":"31"} 
+meses
+Out[19]:
+In[20]:
+# Creacion de una lista con cinco campos # mostramos la lista
+ldias=["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"] ldias
+Out[46]:
+['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado']
+In[47]:
+# Creacion de un diccionario con poblacion # se muestra el nombre del indice
+#valores de la cantidad de poblacion
+sDias=pd.Series(meses,index=ldias) 
+sDias
+Out[47]:
+In[48]:
+# Uso del isnull
+sDias.isnull()
+Out[48]:
+In[49]:
+# Uso del notnull
+sDias.notnull()
+Out[49]:
+In[50]:
+# Asignacion de un nombre a una serie # Nombre a un indice
+
+sDias.name="Semana"
+sDias.index.name="DIAS" sDias
+Out[50]:
+In[51]:
+# uso de s.count
+sDias.count() sDias
+Out[51]:
+In[62]:
+# uso del s.value_counts
+sDias.value_counts() sDias
+Out[62]:
+In[63]:
+# uso de s.sum
+
+scocaina.sum() 
+scocaína
+Out[63]:
+In[64]:
+# uso del cumsum
+scocaina.cumsum() 
+scocaina
+Out[64]:
+In[65]:
+# uso del s.min
+scocaica.min() 
+scocaina
+Out[65]:
+in[66]:
+# uso del max
+scocaina.max() 
+scocaina
+Out[66]:
+USO DE DATA FRAME
+In[67]:
+import pandas as pd
+import numpy as np
+Out[67]:
+Carga de archivos
+In[68]:
+dfTipoCliente = pd.read_csv("TipoCliente.txt", sep="|") dfTipoCliente
+Out[68]:
+In[69]:
+dfCartera = pd.read_csv("Cartera.txt", sep="|") dfCartera
+Our[69]:
+In[71]:
+dfCliente = pd.read_csv("Cliente.txt", sep="|",encoding="ISO-8859-1") dfCliente
+dfCliente
+Out[71]:
+In[72]:
+dfDocumento = pd.read_csv("Documento.txt", sep="|") dfDocumento
+dfDocumento
+Out[72]:
+In[74]:
+# Uso de la funcion de head
+dfCliente.head(15)
+Out[74]:
+In[76]:
+# uso del tail
+dfCliente.tail(15)
+Out[76]:
+In[77]:
+# uso de la funcion info
+dfCliente.info()
+Out[77]:
+In[78]:
+# uso de la funcion de shape
+dfCliente.shape
+Out[78]:
+In[79]:
+# uso de la funcion size
+dfCliente.size
+Out[79]:
+In[89]:
+# uso de la funcion columns
+dfCliente.columns
+Out[81]:
+In[82]:
+# uso de la funcion index
+dfCliente.index
+Out[82]:
+In[83]:
+# uso de la funcion dtypes
+dfCliente.dtypes
+Out[83]:
+Observacion de la informacion dentro de un campo especifico
+In[84]:
+# Con el uso de la funcion nombre
+# se puede observar solo la informacion de un campo # y con la funcion nombre y head se ven
+# los primeros datos
+# pero si solo poenemos la funcion de nombre # nos mandara los primeros y ultimos 5 datos esto se puede hacer tanto como head y tail dfCliente.nombre
+dfCliente.nombre.head(10)
+Out[84]:
+Consulta de la informacion de forma permanente en varios campos
+In[85]:
+dfCliente2 = dfCliente[["nombre","apP","apM"]] 
+dfCliente2.head(20)
+Out[85]:
+nombre	apP	apM
+0	AUTOS MEXICO S.A DE C.V	NaN	NaN
+1	PLAZA DEL VALLE AUTOMOTRIZ SA DE CV	NaN	NaN
+2	AUTOS MEXICANOS, S.A DE C.V	NaN	NaN
+3 TALLER ESPECIALIZADO AUTOMOTRIZ Y AGRICOLA S.A	NaN	NaN
+4	CAR CARE PLAN S.A DE C.V	NaN	NaN
+5	TOKIO MARINE CIA DE SEGUROS S.A DE C.V	NaN	NaN
+6	AUTOMOTRIZ PARNASSE S.A DE C.V	NaN	NaN
+7	MOTOR FRANCE S.A DE C.V	NaN	NaN
+8	PERIFRANCIA S.A DE C.V	NaN	NaN
+9	PINTURA Y PUBLICIDAD DE OAXACA SCL	NaN	NaN
+10	CLAUDIA BEATRIZ	LOPEZ	SORROZA
+11	SEGUROS INBURSA SA GRUPO FINANCIERO INBURSA	NaN	NaN
+12	VICTOR	RODRIGUEZ	SOLANO
+13	INMOLOMAR, S.A DE C.V	NaN	NaN
+14	JEHOVANY	CRUZ	ROJAS
+15	RAUL MARTIN ELISEO	SORROZA	PALANCARES
+16	RAFAEL	IGLESIAS	MEZA
+17	JORGE ANTONIO	AVENDA¥O	MENDOZA
+18	HORACIO	ESPINOSA	ROSARIO
+19	ANGEL	MORALES	GONZALEZ
+In[88]:
+# Uso de la funcion Dropna # donde how es all
+dfCliente2=dfCliente.dropna(axis=0,how="all") 
+dfCliente2.shape
+Out[88]:
+(961, 10)
+In[89]:
+# uso de la funcion Dropna # donde how es any
+dfCliente2=dfCliente.dropna(axis=0,how="any") 
+dfCliente2.shape
+Out[89]:
+In[90]:
+# uso de la funcion de relleno de datos nulos
+pd.isnull(dfCliente.rfc)
+Out[90]:
+In[91]:
+pd.isnull(dfCliente.rfc).values.ravel().sum()
+Out[91]:
+In[92]:
+dfRfc = dfCliente.rfc 
+dfRfc
+Out[92]:
+In[93]:
+# relleno de los campos nulos 
+# dentro de los campos de rfc
+Out[93]:
+dfRfC = dfCliente.rfc.fillna("XAXX010101000")
+dfRfC
+In[94]:
+dfCliente["rfc2"] = dfRfC 
+dfCliente
+Out[94]:
+In[95]:
+dfCliente[dfCliente.rfc2 !="XAXX010101000"].head(50)
+Out[95]:
+idCliente    nombre                           apP                apM        rfc
+1         AUTOS MEXICOS.A DE C.V              Nan                Nan       RME000132Y5
+2         PLAZA DEL VALLE AUTOMOTRIZ SA DE CV NaN                Nan     
+In[96]:
+dfCliente.rename(columns={"rfc2": "rfc"})
+Out[96]:
+idCliente	nombre	apP	apM	rfc tp
+ 
+ 
+0	1	AUTOS MEXICO
+S.A DE C.V
+
+PLAZA DEL
+1	2		VALLE AUTOMOTRIZ
+SA DE CV
+
+AUTOS
+2	3	MEXICANOS,
+S.A DE C.V
+ 
+
+NaN	NaN	RME0001032Y5	M	garantias
+
+
+NaN	NaN	PVA0203202N1	M	AUTOS.previas
+
+
+
+NaN	NaN	XAXX010101000	M   AUTOS.internas
+ 
+
+	TALLER	
+3	4	ESPECIALIZADO	NaN	NaN	TEA790919KK5	M
+		AUTOMOTRIZ Y					
+		AGRICOLA S.A					
+		CAR CARE					
+4	5	PLAN S.A DE	NaN	NaN	CCP9807293M6	M	
+		C.V	
+...	...	...	...	...	...	...	
+956	501644	ENRIQUE	CRUZ	SAMPABLO	BAGA670105CV6	F	sam
+957	501662	FELIPE NERI	MENDOZA	HERNANDEZ	MEHF780526BN6	F	riv
+958	501684	AMANDA	MINERVA	NU¥EZ	NaN	F	yolandamarli
+959	501762	RAFAEL	CAYETANO	BARCENA	NaN	F	k
+		CHRISTA					
+960	501764	ANTONIE	ENGEL	MAYER	NaN	F	
+
+In[100]:
+pd.isnull(dfCliente.rfc).values.ravel().sum()
+Out[105]:
+
+
+
+
+
